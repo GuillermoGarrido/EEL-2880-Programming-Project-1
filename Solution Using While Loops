@@ -3,111 +3,107 @@
 
 int odd(void) //Factorial function performed on decreasing
               //odd numbers from 13 to 1
+{	
+	int outer = 1;
+	int inner = 1;
+	int totalNumber = 1;
+	int factorialMax = 14;
+
+	printf("Factorial with Odd Numbers\n");	
+
+	while(factorialMax >= outer ) //Outer loop from 13, 11, 9, etc.
+	{
+		 while(inner <= factorialMax) //Inner loop
+		 {
+		 	totalNumber = totalNumber * inner;
+		 	inner++;
+		 }
+		
+		if(factorialMax % 2 != 0)
+		{
+			printf("%i!\t=\t%i\n", factorialMax,totalNumber);	
+		}
+		
+		factorialMax--;
+		inner=1; //Reset
+		totalNumber=1; //Reset
+		
+	}
+}
+
+int even(void) //Factorial function performed on increasing even numbers from 2 to 14
+{	
+	int outer = 1;
+	int inner = 1;
+	int totalNumber = 1;
+	int factorialMax = 14;
+
+	printf("\n");
+	printf("Factorial with Even Numbers\n");	
+
+	while( outer <= factorialMax ) //Outer loop from 2, 4, 6, etc.
+	{
+		 
+		 while(inner <= outer) //Inner loop
+		 {
+		 	totalNumber = totalNumber * inner;
+		 	inner++; //Increment by 1
+		 } 
+		 
+		if(outer % 2 == 0) //Begin if statement
+		{
+			printf("%i!\t=\t%i\n", outer,totalNumber);
+		} //End if
+		outer++; //Increment by 1
+	}
+}
+
+int square(void) //Beginning of square function
 {
-  int outer = 1;
-  int inner = 1;
-  int totalNumber = 1;
-  int factorialMax = 14;
-  
-  printf("Factorial with Odd Numbers\n");
-  
-  while (factorialMax >= outer) //Outer loop from 13, 11, 9, etc.
-  {
-    while(inner <= factorialMax) //Inner loop
-    {
-      totalNumber = totalNumber * inner;
-      inner++;
-    }
-    
-    if(factorialMax % 2 != 0) //Only print odd numbers
-    {
-      printf("%i!\t=\t%i\n", factorialMax, totalNumber);
-    }
-    
-    factorialMax--;
-    inner = 1; //Reset
-    totalNumber = 1; //Reset
-  }
- }
- 
- int even(void) //Factorial function performed on increasing even numbers from 2 to 14
- {
-  int outer = 1;
-  int inner = 1;
-  int totalNumber = 1;
-  int factorialMax = 14;
-  
-  printf("\n");
-  printf("Factorial with Even Numbers\n");
-  
-  while( outer <= factorialMax ) //Outer loop from 2, 4, 6, etc.
-   {
-   while (inner <= outer) //Inner loop
-   {
-    totalNumber = totalNumber * inner;
-    inner++;
-   }
-   
-   if(outer % 2 == 0) //Only print even numbers
-   {
-    print("%i!\t=\t%i\n", outer, totalNumber);
-   }
-   outer++; //Increment by 1
-  }
- }
- 
- int square(void) //Beginning of square function
- {
-  printf("\nSquare Functions\n");
-  signed int range = 12;
-  int totalNumber = 1;
-  
-  while(range != -13)  //Range
-  {
-    totalNumber = range * range;
-    printf("%i\t=\t%i\n", range, totalNumber);
-    range--; //Decrement by 1
-  }
- }
- int cube(void) //Beginning of cube function
- {
-  printf("\nCube Functions\n");
-  signed int range = 12;
-  int totalNumber = 1;
-  
-  while(range != -13) //Range
-  {
-    totalNumber = range * range * range;
-    printf("%i\t=\t%i\n", range, totalNumber);
-    range--; //Decrement by 1
-  }
- }
- 
- int fifth(void) //Beginning of 5th power function
- {
-  printf("\n5th Power Functions\n");
-  signed int range = 9;
-  int totalNumber = 1;
-  
-  while(range != -10) //Range
-  {
-    totalNumber = range * range * range * range * range;
-    printf("%i\t=\t%i\n", range, totalNumber);
-    range--1; //Decrement by 1
-  }
- }
- 
- int main(void) //Beginning of the MAIN function, which calls upon other functions
- {
-  printf("\n\t\t\t\t---Programming Project 1 Using While Loops---\n\n");
-  
-  odd();
-  even();
-  square();
-  cube();
-  fifth();
- }
- 
- 
- 
-    
+	printf("\nSquare Functions\n");	
+	signed int range = 12;
+	int totalNumber = 1;
+	while(range != -13 ) //Range
+	{
+		totalNumber = range * range;
+		printf("%i\t=\t%i\n", range, totalNumber);
+		range--; //Decrement by 1
+	}
+}
+
+int cube(void) //Beginning of cube function
+{
+	printf("\nCube Functions\n");	
+	signed int range = 12;
+	int totalNumber = 1;
+	while(range != -13 ) //Range
+	{
+		totalNumber = range * range * range;
+		printf("%i\t=\t%i\n", range, totalNumber);
+		range--; //Decrement by 1
+	}
+}
+
+int fifth(void) //Beginning of 5th power function
+{
+		printf("\n5th Power Functions\n");	
+		signed int range = 9;
+		int totalNumber = 1;
+		while(range != -10 ) //Range
+		{
+			totalNumber = range * range * range * range * range;
+			printf("%i\t=\t%i\n", range, totalNumber);
+			range--; //Decrement by 1
+		}
+}
+
+int main(void) //Beginning of the MAIN function, which calls upon other functions
+{
+	printf("\n\t\t\t\t---Programming Project 1 Using While Loops---\n\n");
+	
+	odd();
+	even();
+	square();
+	cube();
+	fifth();
+}
