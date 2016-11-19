@@ -1,0 +1,23 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+int i; //outer counter
+int j; //inner counter
+unsigned int factorial; //factorial's integer value
+
+int main(void) //begin main function
+{
+  printf("Even factorials from 2 to 14:\t\t Odd factorials from 1 to 13:\n\n"); //display numbers
+ 
+ //outer loop
+  for( i = 2; i <= 14; i += 2 ) {
+    factorial = 2; //starting number
+    //inner loop
+    for( j = 3; j <= i; j++) {
+      factorial *= j; //factorial calculation
+    }
+    
+    printf( "%28u\t\t %27u\n\n/', factorial, (factorial/i) ); //display facctorial values for even and odd numbers
+    }
+    return(0);
+  } //end main function
