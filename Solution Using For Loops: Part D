@@ -1,0 +1,17 @@
+#include <stdio.h>
+
+int main()
+{
+  int x; //assign counter to x
+  int y = -9; //assign initial integer to 5th power
+  
+  puts("These are the 5th powers of even numbers from -9 to 9\n"); //creates header
+  
+  puts("Values\t\t5thPower\t\t\n"); //creates table
+  
+  for( x = -9; x <= 9; ++x ) {
+  printf("%d\t\t%\t\t\n", y, (y * y * y * y * y) ); //prints the 5th power values
+  
+  y += 1; //increment by 1
+  } //end for loop
+} //end main
