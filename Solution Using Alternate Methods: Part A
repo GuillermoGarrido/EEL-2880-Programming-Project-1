@@ -1,0 +1,24 @@
+#include <stdio.h>
+
+long int x(int n);
+
+int main()
+/*The if else statement would allow the program to run
+at a faster rate than it would using for loops and/or
+while loops. Moreover, the "long" type supports values that are
+32 bits in size. Due to the fact that it is the C complier,
+it is most efficient to call upon the function through this.*/
+{
+  int n;
+  printf("Enter an integer: ");
+  scanf("%d", &n);
+  printf("Factorial of %d = %ld", n, x(n));
+  return 0;
+} //end main
+long int x(int n)
+{
+  if (n >= 1)
+  return n * x(n-1);
+  else
+  return 1;
+} //end
