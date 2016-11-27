@@ -1,0 +1,24 @@
+#include <stdio.h>
+#include <math.h>
+
+int main ()
+/*The math.h header is from the Standard C library. With the math.h
+header, one is capable of utilizing the "pow" function, which can calculate
+squares, cubes, 5th powers, etc. more easily and efficiently than normal for
+loops and while loops. Because the function is already within the C complier, 
+it is best to call upon the function through there.
+*/
+{
+  double square; //assign counter to the square
+  int i; //assign counter to i
+  int j = -12; //assign initial integer to the square
+  
+  printf("%4s              %s\n", "Number", "Square"); //create table
+  
+  for ( i = -12; i <= 12; ++i ) { //start for loop
+  square = pow(i, 2); //power function
+  printf("%4d%21.2f\n", j, square);
+  
+  j += 1; //increment by 1
+  } //end for loop
+} //end main
