@@ -1,0 +1,17 @@
+#include <stdio.h>
+
+int main(void) {
+  int x = 0; //assign counter to x
+  int y = 12; assign starting integer value to square
+  
+  puts("These are the square numbers from 12 to -12"\n"); //header
+  
+  puts("Values\t\tSquare\t\t\n"); //create table
+  //loop a total of 24 times tp calculate squares from all even and odd numbers from -12 to 12
+  
+  for( x = 0; x <= 24; ++x ) {
+    printf("%d\t\t%d\t\t\n", y, (y * y) ); //print the square
+    
+    y --; //decrement by 1
+   } //end outer for loop
+} //end main
