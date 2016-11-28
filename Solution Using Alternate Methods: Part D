@@ -1,0 +1,30 @@
+#include <stdio.h>
+#include <math.h>
+
+int fifth(void) //5th power function
+/*Call to this function is from the Standard C library
+It is most efficient because the function is already provided and produces
+a result through optimal and efficient coding. Since it is in the C complier, it
+is quickest to call upon the function through here.
+*/
+{
+  printf("\n5th Power Functions Using Std Library Function Call\n");
+  signed int range = 9;
+  int totalNumber = 1;
+  
+  while(range != -10 ) //Range
+  {
+    totalNumber = pow(range, 5); //Calls upon C Library Function pow()
+    
+    //pow(x, y);
+    //Returns result of raising x to the power of y
+      printf("%i\t=\t%i\n", range, totalNumber);
+      range--; //decrement by 1
+   }
+}
+
+int main(void) //MAIN function that calls upon other functions
+{
+  printf("\n\t\t\t\t---Problem 3---\n\n");
+  fifth(); //method that calls upon pow(); from math.h
+} //end main
