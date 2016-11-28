@@ -1,0 +1,20 @@
+#include <stdio.h>
+#include <math.h>
+
+int main(void)
+{
+  unsigned int x = 0; //assign counter
+  int y = -12; //assign integer start
+  int results; //assign integer for pow results
+  
+  puts(" Integer\tEven and Odd Numbers Cubed\n" ); //display header
+  
+  while ( x <= 24 ) { //assign loop 24 times
+    results = pow(y, 3); //pow result cubed
+    printf("%8d\t%24d\n", y, results); //display for integer and results
+    
+    x++; //increment x by 1
+    y++; //increment y by 1
+  } //end while loop
+} //end main
+  
